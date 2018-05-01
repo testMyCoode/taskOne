@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+    <style>
+        * {
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            width: 500px;
+            height: 400px;
+        }
+
+        textarea {
+            width: 365px;
+            height: 165px;
+            outline: none;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        button {
+            margin-left: 285px;
+            padding: 3px 5px;
+            display: block;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <h1>Text area:</h1>
+    <textarea id="textArea">multi-line textarea</textarea>
+    <button id="button">Calculate</button>
+    <p>Number of words: <span id="quantity"></span></p>
+    <p>Length of the maximum word: <span id="max"></span></p>
+    <p>Length of the minimum word: <span id="min"></span></p>
+    <p>Average length of words: <span id="average"></span></p>
+</div>
+<script src="task1-oop.js"></script>
+</body>
+</html>
