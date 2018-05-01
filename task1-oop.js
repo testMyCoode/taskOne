@@ -3,8 +3,8 @@
         const input = textArea.value.trim();
         const output = new TextParser(input);
         quantity.textContent = output.getWordsQuantity();
-        max.textContent = output.getMaxLength();
-        min.textContent = output.getMinLength();
+        max.textContent = output.getLongestWord();
+        min.textContent = output.getShortestWord();
         average.textContent = output.getAverageLength()
     });
 
@@ -14,16 +14,15 @@
         this.getWordsQuantity = function () {
              return words.length;
         };
-        this.getMaxLength = function () {
+        this.getLongestWord = function () {
              return Math.max(...wordsLengths);
         };
-        this.getMinLength = function () {
+        this.getShortestWord = function () {
              return Math.min(...wordsLengths);
         };
         this.getAverageLength = function () {
-             const reducedArray = wordsLengths.reduce((prev, current) => prev + current);
-             return Math.round(reducedArray/words.length);
+             const summOfLengths = wordsLengths.reduce((prev, current) => prev + current);
+             return Math.round(summOfLengths/words.length);
         };
     }
 }());
-
